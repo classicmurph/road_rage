@@ -22,3 +22,10 @@ class Car():
     def slow_down(self):
         self.move_forward()
         self.acceleration_speed -= 4
+
+    def stop(self):
+        self.acceleration_speed = 2
+        self.position[1] += 1
+        return self.position
+
+   
