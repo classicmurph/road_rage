@@ -38,4 +38,3 @@ class Simulation():
             else:
                 car1.move_forward()
         car2.move_forward()
-            # elif car2.
