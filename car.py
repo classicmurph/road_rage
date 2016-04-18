@@ -14,9 +14,9 @@ class Car():
         self.size = 5
 
     def move_forward(self):
-        self.position[0] += self.acceleration_speed
-        self.position[1] += 1
-        self.acceleration_speed += 2
+        self.position += self.acceleration_speed
+        while self.acceleration_speed < self.max_speed:
+            self.acceleration_speed += 2
         return self.position
 
     def slow_down(self):
@@ -25,7 +25,7 @@ class Car():
 
     def stop(self):
         self.acceleration_speed = 2
-        self.position[1] += 1
+        # self.position[1] += 1
         return self.position
 
-   
+    def match_speed(self, car1, car2):
